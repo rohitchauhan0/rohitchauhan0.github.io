@@ -1,0 +1,300 @@
+@font-face {
+    font-family: 'General Sans Medium';
+    src: url(GeneralSans-Medium.otf);
+}
+
+@font-face {
+    font-family: 'General Sans Regular';
+    src: url(GeneralSans-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'General Sans Medium';
+    color: white;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.main {
+    width: 100%;
+    position: relative;
+}
+
+.page1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.nav {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 2.4vw;
+    width: 100%;
+}
+
+.nav a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav h4 {
+    font-family: 'General Sans Regular';
+    font-weight: bold;
+}
+
+.nav h4 span {
+    opacity: 0.6;
+}
+
+.heading {
+    margin-top: 110px;
+
+}
+
+.heading h1 {
+    font-family: 'General Sans Medium';
+    font-size: 10vw;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: 50;
+    line-height: 0.6;
+    padding: 10px;
+    padding-left: 2.7vw;
+}
+
+#second-Heading {
+    margin-left: 9.2vw;
+    line-height: 1;
+    margin-top: 1%;
+}
+
+.heading h5 {
+    text-align: right;
+    margin-top: 8px;
+    font-weight: 30;
+    font-size: 13px;
+}
+
+.blockText {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.small-headings {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    margin-top: 100px;
+    text-align: right;
+    padding-right: 50px;
+    line-height: .2;
+}
+
+.small-headings h5 {
+    font-weight: 8;
+    font-size: 1.2vw;
+    margin-top: .5vw;
+}
+
+.footer {
+    position: absolute;
+    padding: 0px 5vw;
+    width: 100%;
+    bottom: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer h5 {
+    font-weight: 20;
+    font-size: 1vh;
+}
+
+.icons i {
+    background-color: lightgray;
+    color: rgb(0, 0, 0);
+    border-radius: 100%;
+    width: 200px;
+    padding: 7px;
+    font-weight: bold;
+    opacity: .6;
+}
+
+.page2 {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    padding-top: 180px;
+    padding-right: 18%;
+}
+
+.elem {
+    width: 100%;
+    font-family: 'General Sans Medium';
+    border-top: 1px solid gray;
+    padding: 2vw 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0;
+    position: relative;
+}
+
+.elem h1 {
+    font-weight: 50;
+    font-size: 7vw;
+    opacity: 0.6;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.elem h5 {
+    font-weight: 50;
+}
+
+.elem1 {
+    border-bottom: 1px solid gray;
+}
+
+.mousecircle {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: rgb(255, 250, 250);
+    border-radius: 100%;
+    z-index: 9999;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .3s;
+    filter: blur(1px);
+    border: .5px solid grey;
+}
+
+.About {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    padding: 10vw 10vw;
+    padding-right: 15%;
+    flex-wrap: wrap;
+}
+
+.textAbout {
+    width: 25rem;
+    font-size: 15px;
+}
+
+.textAbout h5 {
+    opacity: .5;
+    margin-bottom: 5px;
+    font-weight: 50;
+}
+
+.textAbout p {
+    font-family: 'General Sans Regular';
+    line-height: 1.2;
+    margin-bottom: 30px;
+    font-size: 1.5vh;
+}
+
+.About img {
+    width: 20vh;
+}
+
+.textAbout a {
+    text-decoration: none;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 1s ease;
+}
+
+.textAbout a:hover {
+    background-color: white;
+    color: black;
+}
+
+.subscribe {
+    width: 100%;
+    background-color: black;
+    padding: 5vw 7vw;
+    font-size: 10px;
+}
+
+.subscribe h3 {
+    font-weight: 50;
+    opacity: .7;
+}
+
+.subscribe h2 {
+    font-weight: 50;
+    font-size: 14px;
+}
+
+.second-footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 5vw;
+    font-size: 1vh;
+
+}
+
+.right {
+    display: flex;
+    gap: 2vh;
+}
+
+.left {
+    display: flex;
+    gap: 20px;
+
+}
+
+.right h3 {
+    font-weight: 50;
+}
+
+.left h3 {
+    font-weight: 50;
+}
+
+
+@media screen and (max-width:400px) {
+    .page1 {
+        height: calc(100vh - 7vh);
+    }
+
+    .small-headings h5 {
+        font-size: 5vw;
+    }
+
+    .About {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mousecircle {
+        display: none;
+    }
+}

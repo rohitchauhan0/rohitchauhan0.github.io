@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cynthia Ugwu</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll.css">
+    <style>
+        .bounding {
+            width: fit-content;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .bounding .boundingelem {
+            transform: translateY(1000%);
+        }
+
+        .elem h1:hover {
+            transform: scaleX(1.2);
+            opacity: .3;
+        }
+
+        .elem img {
+            height: 30vh;
+            width: 25vw;
+            position: absolute;
+            z-index: 999;
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mousecircle">
+
+    </div>
+
+    <div class="main">
+        <div class="page1">
+            <div class="nav">
+                <a href="#">Cynthia Ugwu</a>
+                <h4>MENU<span>+</span></h4>
+            </div>
+            <div class="heading">
+                <div class="bounding">
+                    <h1 class="boundingelem">Product</h1>
+                </div>
+                <div class="blockText">
+                    <div class="bounding">
+                        <h1 id="second-Heading" class="boundingelem">Designer</h1>
+                    </div>
+                    <div class="bounding">
+                        <h5 class="boundingelem">BASED IN TORONTO</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="small-headings">
+                <div class="bounding">
+                    <h5 class="boundingelem">AVAILABLE FOR FREELANCE</h5>
+                </div>
+                <div class="bounding">
+                    <h5 class="boundingelem">WORK FROM MAY 23'</h5>
+                </div>
+            </div>
+            <di class="footer">
+                <h5>CURRENTLY WORKING AT YML <i class="ri-arrow-right-up-line"></i></h5>
+                <h5>PROTOPIE AMBASSADOR <i class="ri-arrow-right-up-line"></i></h5>
+                <div class="icons">
+                    <i class="ri-arrow-down-line"></i>
+                    <i class="ri-arrow-down-line"></i>
+                </div>
+        </div>
+
+        <div class="page2">
+            <div class="elem">
+                <img src="plug.png" alt="">
+                <h1>THE PLUG</h1>
+                <h5>2022</h5>
+            </div>
+            <div class="elem">
+                <img src="ixperience.png" alt="">
+                <h1>IXPERIENCE</h1>
+                <h5>2022</h5>
+            </div>
+            <div class="elem elem1">
+                <img src="hudu.png" alt="">
+                <h1>HUDU</h1>
+                <h5>2021</h5>
+            </div>
+        </div>
+        <div class="About">
+            <img src="cynthia.png" alt="">
+            <div class="textAbout">
+                <h5>(ABOUT ME)</h5>
+                <p>I'm a product designer with a passion for creating products that not only look good but also solve
+                    real problems. When I'm not sketching ideas on paper, you can find me binge-watching a Netflix
+                    series or playing video games. My design philosophy is simple: make it visually appealing,
+                    functional, and bring a smile to people's faces. I'm the designer you want on your team if you want
+                    to make people say 'I need that in my life!'.</p>
+                <a href="#">Let's talk</a>
+            </div>
+
+        </div>
+        <div class="subscribe">
+            <h3>(FORGET TO MENTION)</h3>
+            <h2>SUBSCRIBE TO MY YOUTUBE CHANNEL<i class="ri-arrow-right-up-line"></i></h2>
+        </div>
+        <div class="second-footer">
+            <div class="left">
+                <h3>2023 &#169;</h3>
+                <h3>12:19 PM EST</h3>
+            </div>
+            <div class="right">
+                <h3>DRIBBLE</h3>
+                <h3>INSTAGRAM</h3>
+                <h3>LINKEDIN</h3>
+                <h3>TWITTER</h3>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+<script src="scroll.js"></script>
+
+<script>
+    let elem = document.querySelectorAll(".elem")
+    elem.forEach((elem) => {
+        elem.addEventListener("mouseleave", (details) => {
+            gsap.to(elem.querySelector("img"), {
+                opacity: 0,
+                ease: Power1,
+            })
+        })
+    })
+    elem.forEach((elem) => {
+        let rotate = 0;
+        let differ = 0;
+        elem.addEventListener("mousemove", (details) => {
+            let diff = details.clientY - elem.getBoundingClientRect().top
+            differ = details.clientX - rotate;
+            rotate = details.clientX;
+
+            gsap.to(elem.querySelector("img"), {
+                opacity: 1,
+                ease: Power3,
+                top: diff,
+                left: details.clientX,
+                rotate: gsap.utils.clamp(-20, 20, differ)
+            })
+        })
+    })
+</script>
+
+</html>
