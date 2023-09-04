@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background: radial-gradient(circle, rgba(108,67,19,1) 0%, rgba(20,71,80,1) 100%);
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.heading{
+    color: white;
+    border: 1px solid white;
+    padding: 10px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgba(242, 227, 227, 0.203);
+
+}
+.center-container{
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 45%;
+    height: 70%;
+    background: rgba( 255, 255, 255, 0.10 );
+    box-shadow: 0 8px 32px 0 rgba(135, 67, 31, 0.37);
+    backdrop-filter: blur( 9.6px );
+    -webkit-backdrop-filter: blur( 8.9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 5px;
+    position: relative;
+}
+ .box{
+    border: 2px solid black ;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6vw;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    font-family: cursive;
+    transition: all 0.2s ease-in-out;
+}
+.box:hover{
+    background: rgba( 255, 255, 255, 0.0000001 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}
+
+#box1, #box2, #box3{
+    border-top: 0;
+}
+#box7,#box8,#box9{
+    border-bottom: 0;
+}
+#box1,#box4,#box7{
+    border-left: 0;
+}
+#box3,#box6,#box9{
+    border-right: 0;
+}
+
+.left-img img{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    opacity: 0;
+}
+.right-img img{
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    opacity: 0;
+}
+.newgame{
+    color: white;
+    border: 1px solid white;
+    padding: 10px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgba(242, 227, 227, 0.203);
+    opacity: 0;
+}
+.active{
+    opacity: 1;
+}
+.win{
+    background-color: rgb(200, 130, 86);
+}
+.container .winner-Img{
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    display: none;
+}
+@media (max-width:900px) {
+    .center-container{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .right-img img{
+        display: none;
+    }
+    .left-img img{
+        display: none;
+    }
+    .box{
+        font-size: 10vw;
+    }
+}
