@@ -52,7 +52,6 @@ function checkGameOver() {
     let ans = ""
     winningGamePosition.forEach((position) => {
         newGame.classList.add("active")
-        //     console.log(position[0])
         if ((gridGame[position[0]] !== "" || gridGame[position[1]] !== "" || gridGame[position[2]] !== "") && (gridGame[position[0]] === gridGame[position[1]]) && (gridGame[position[1]] === gridGame[position[2]])) {
             if (gridGame[position[0]] === "X") {
                 ans = "X"
@@ -90,10 +89,7 @@ function checkGameOver() {
     }
 
 
-}// checkGameOver()
-
-// function checkGameOver(){
-// }
+}
 
 function handleClick(index) {
     if (gridGame[index] === "") {
